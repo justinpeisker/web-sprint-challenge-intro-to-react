@@ -28,14 +28,10 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <h3>{charList[0].name}</h3>
-      <h3>{charList[1].name}</h3>
-      <h3>{charList[2].name}</h3>
-      <h3>{charList[3].name}</h3>
-      <h3>{charList[4].name}</h3>
-      <h3>{charList[5].name}</h3>
-
-      <Char char={charList} />
+      {charList.map(item => {
+        return <Char char={charList} />
+      })}
+       {/* <Char char={charList} /> */}
     </div>
    
   );
